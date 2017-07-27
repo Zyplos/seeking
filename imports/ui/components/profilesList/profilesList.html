@@ -1,0 +1,184 @@
+<div layout="column">
+
+  <profile-add-button ng-show="profilesList.isLoggedIn"></profile-add-button>
+  <div class="landingpage" flex layout="column" layout-align="center center" ng-hide="profilesList.isLoggedIn">
+    <div class="landingpage1" flex layout gt-xs="row" layout-align="center center" ng-hide="profilesList.isLoggedIn">
+      <!--<img class="phonehome" src="images/smartphone.png">-->
+      <!--<h2>+</h2>-->
+      <!--<img class="amphome" src="images/amplifier.png">-->
+    </div>
+    <div class="landingpage2" flex layout="column" layout-align="center center" ng-hide="profilesList.isLoggedIn">
+      <span class="tagline md-headline">Be your own favorite band.</span>
+    </div>
+    <div class="landingpageactions" layout="column" layout-align="center center" ng-hide="profilesList.isLoggedIn">
+      <md-button class="md-raised md-accent" ui-sref="promo">
+        Get Started
+      </md-button>
+      <md-button class="md-raised" ui-sref="login">
+        Login
+      </md-button>
+    </div>
+  </div>
+
+  <!--<md-divider ng-hide="profilesList.isLoggedIn"></md-divider>-->
+
+  <div flex class="landingpage4" layout="column" layout-align="center" ng-hide="profilesList.isLoggedIn">
+    <div flex class="greetingblurb">
+      <span flex class="greetingheadline md-headline">
+        We help music happen.
+      </span>
+      <p class="missionstatement">
+        One of the biggest hurdles in starting any musical project is finding the right people to work with.
+        Everyone has a unique set of ideas and standards that deserve to be fulfilled. With our matching service,
+        we can help you find the best people to work with to achieve your goals.
+        Don't just settle for a band you can find. With Seeking, you can create the band you've always wanted.
+      </p>
+    </div>
+  </div>
+
+  <div class="landingpage3" layout="column" ng-hide="profilesList.isLoggedIn">
+    <span class="explainerheadline md-headline">How it works:</span>
+
+
+    <div layout="row" layout-xs="column" layout-padding layout-margin>
+  <div flex>
+
+    <div layout="column" layout-xs="row">
+      <div flex>
+        <div class="landingpageicon">
+          <img class="iconhome" src="images/plusicon.png">
+        </div>
+      </div>
+      <div flex>
+        <div class="landingpageblurb" layout="column">
+          <span class="blurbtext1">Create a profile.</span>
+          <span class="blurbtext2">Tell us about who you are and where you're from.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div flex>
+
+
+    <div layout="column" layout-xs="row">
+      <div flex>
+        <div class="landingpageicon">
+          <img class="iconhome" src="images/surveyicon.png">
+        </div>
+      </div>
+      <div flex>
+        <div class="landingpageblurb" layout="column">
+          <span class="blurbtext1">Take our survey.</span>
+          <span class="blurbtext2">Let us know what makes you tick as a musician.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div flex>
+
+    <div layout="column" layout-xs="row">
+      <div flex>
+        <div class="landingpageicon">
+          <img class="iconhome" src="images/seek.png">
+        </div>
+      </div>
+      <div flex>
+        <div class="landingpageblurb" layout="column">
+          <span class="blurbtext1">Seek.</span>
+          <span class="blurbtext2">Find other musicians like you around you.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div flex>
+    <div layout="column" layout-xs="row">
+      <div flex>
+        <div class="landingpageicon">
+          <img class="iconhome" src="images/horns.png">
+        </div>
+      </div>
+      <div flex>
+        <div class="landingpageblurb" layout="column">
+          <span class="blurbtext1">Match.</span>
+          <span class="blurbtext2">Hit the horns on folks you like, reach out, and get together.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+  </div>
+
+  <div class="landingpage7" flex layout="column" layout-align="center center" ng-hide="profilesList.isLoggedIn"></div>
+
+  <div class="landingpage6" layout="column" ng-hide="profilesList.isLoggedIn">
+    <span class="landingendheadline md-headline">Starting a band is hard work.</span>
+    <p class="missionstatement2">
+      Let's be honest. Online classified ads and social media groups are as much of a crapshoot as
+      flyers on the walls at concert venues and music stores. The right people for the band you want
+      are out there. Find them here.
+      <br><br>
+      <strong>Take luck out of the equation with Seeking.</strong>
+    </p>
+  </div>
+
+  <div class="smedia-icon-container" ng-hide="profilesList.isLoggedIn">
+    <a href="http://facebook.com/seekingmusicapp" target="_blank"><img class="smedia-icon" src="images/fbblack.png"></a>
+    <a href="http://twitter.com/seekingmusicapp" target="_blank"><img class="smedia-icon" src="images/twblack.png"></a>
+  </div>
+
+  <div class="small" ng-hide="profilesList.isLoggedIn" layout="row" layout-align="center center">&copy; 2017 Seeking LLC, all rights reserved</div>
+
+  <div ng-hide="!profilesList.isLoggedIn" flex layout="column">
+    <!--<md-card dir-paginate="profile in profilesList.profiles | itemsPerPage: profilesList.perPage" total-items="profilesList.profilesCount">-->
+    <md-card ng-repeat="profile in profilesList.profiles" ng-show="profilesList.isOwner(profile)">
+      <profile-remove profile="profile"></profile-remove>
+      <!--<img src="images/jch.jpg" class="md-card-image" alt="{{profile.firstName}}">-->
+      <profile-image images="profile.images"></profile-image>
+      <md-card-title>
+        <md-card-title-text>
+          <div flex layout="row">
+            <span flex class="browseheadline md-headline">
+              {{profile.firstName}}
+            </span>
+            <!--<a href="{{profile.fbUrl}}" target="_blank" ng-hide="!profile.fbUrl"><md-button class="browsesocial md-fab md-mini md-primary"><img class="fbwhite" src="images/fbwhite.png"></md-button></a>-->
+            <a href="{{profile.bcUrl}}" target="_blank" ng-hide="!profile.bcUrl"><md-button class="browsesocial2 md-fab md-mini md-primary"><img class="bandcampwhite" src="images/bandcampwhite.png"></md-button></a>
+            <a href="{{profile.scUrl}}" target="_blank" ng-hide="!profile.scUrl"><md-button class="browsesocial2 md-fab md-mini md-warn"><img class="soundcloudwhite" src="images/soundcloudwhite.png"></md-button></a>
+
+          </div>
+        </md-card-title-text>
+      </md-card-title>
+
+      <md-card-content>
+        <div flex layout="column" class="browseinfo">
+            <!--<span class="browselabel" ng-hide="!profile.age">Age</span>-->
+            <span class="browsetext">{{profile.age}} years old</span>
+            <!--<span class="browselabel" ng-hide="!profile.city">City</span>-->
+            <span class="browsetext">Located in {{profile.city}}<span ng-hide="!profile.state">,</span> {{profile.state}}</span>
+            <!--<span class="browselabel" ng-hide="!profile.instrument1">Instruments</span>-->
+            <span class="browsetext">{{profile.instrument1}}<span ng-hide="!profile.instrument2">,</span> {{profile.instrument2}}</span>
+            <!--<span class="browselabel" id="biolabel" ng-hide="!profile.bio">Bio</span>-->
+            <span class="browsetext">{{profile.bio}}</span>
+            <span class="browsetext" ng-hide="!profile.lookingFor">Seeking {{profile.lookingFor}}</span>
+        </div>
+      </md-card-content>
+
+      <md-card-actions>
+        <div layout="row" layout-align="center center" class="cardbuttons">
+          <!--<img class="spotify" src="images/spotifyblack.png">-->
+          <md-button class="md-fab"  ui-sref="profileDetails({ profileId: profile._id })"><img class="pickiconbig" src="images/pickplain.png"></md-button>
+          <md-button ui-sref="survey1({ profileId: profile._id })" class="md-fab"><md-icon md-svg-icon="social:ic_poll_24px"></md-icon></md-button>
+          <a href="{{profile.fbUrl}}" target="_blank" ng-hide="!profile.fbUrl"><md-button class="hornsbutton md-fab"><img class="hornsiconbig" src="images/horns.png"></md-button></a>
+          <!--<img class="soundcloud" src="images/soundcloudblack.png">-->
+        </div>
+      </md-card-actions>
+
+        <!--<dir-pagination-controls on-page-change="profilesList.pageChanged(newPageNumber)"></dir-pagination-controls>-->
+        <!--<profiles-map profiles="profilesList.profiles"></profiles-map>-->
+      </md-card>
+
+      <div layout="row" layout-align="end">
+        <md-button class="seekbutton md-fab" ui-sref="profiles2"><md-icon md-svg-icon="av:ic_fast_forward_24px"></md-icon></md-button>
+      </div>
+  </div>
+</div>

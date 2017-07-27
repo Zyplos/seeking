@@ -1,0 +1,36 @@
+<md-content layout="row" layout-align="center start" layout-fill layout-margin>
+  <md-whiteframe layout="column" flex flex-md="50" flex-lg="50" flex-gt-lg="33" class="loginregcontainer" layout-fill>
+    
+    <!--<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>-->
+ 
+    <div layout="column" layout-fill layout-margin layout-padding>
+ 
+      <form class="loginregform" name="registerForm" layout="column" layout-fill layout-padding layout-margin>
+        
+        <md-input-container >
+          <label>
+            Email
+          </label>
+          <input type="text" ng-model="register.credentials.email" aria-label="email" required/>
+        </md-input-container>
+        <md-input-container >
+          <label>
+            Password
+          </label>
+          <input type="password" ng-model="register.credentials.password" aria-label="password" required/>
+        </md-input-container>
+        <div layout="row" layout-align="end center">
+          <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+          <md-button class="md-raised" ng-click="register.register()" aria-label="login" ui-sref="profiles" ng-disabled="register.registerForm.$invalid()">Register</md-button>
+        </div>
+      </form>
+      
+      <md-divider></md-divider>
+      <div layout="row" layout-align="center">
+        <a class="md-button small" href="/login">Already a user?</a>
+      </div>
+ 
+    </div>
+ 
+  </md-whiteframe>
+</md-content>

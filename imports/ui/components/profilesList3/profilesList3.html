@@ -1,0 +1,59 @@
+<div layout="column" layout-padding>
+    
+    <md-subheader class="md-no-sticky">Users who matched with you:</md-subheader>
+ 
+    <div ng-hide="!profilesList3.isLoggedIn" flex layout="column">
+      <!--<md-card dir-paginate="profile in profilesList2.profiles | itemsPerPage: profilesList2.perPage" total-items="profilesList.profilesCount">-->
+      <!--<md-card ng-repeat="profile in profilesList3.profiles | filter:{ response: matchResponseUsers.type }" ng-show="!profilesList3.isOwner(profile)">-->
+      <md-card ng-repeat="profile in profilesList3.profiles" ng-show="!profilesList3.isOwner(profile)">
+      <!--<img src="images/jch.jpg" class="md-card-image" alt="{{profile.firstName}}">-->
+      <profile-image images="profile.images"></profile-image>
+      <md-card-title>
+        <md-card-title-text>
+          <div flex layout="row">
+            <span class="browseheadline2 md-headline" ui-sref="profileDetails2({ profileId: profile._id })">
+              {{profile.firstName}}
+            </span>
+            <a href="http://{{profile.fbUrl}}" target="_blank" ng-hide="!profile.fbUrl"><md-button class="browsesocial3 md-fab md-mini md-primary"><img class="fbwhite" src="images/fbwhite.png"></md-button></a>
+            <a href="http://{{profile.bcUrl}}" target="_blank" ng-hide="!profile.bcUrl"><md-button class="browsesocial4 md-fab md-mini md-primary"><img class="bandcampwhite" src="images/bandcampwhite.png"></md-button></a>
+            <a href="http://{{profile.scUrl}}" target="_blank" ng-hide="!profile.scUrl"><md-button class="browsesocial4 md-fab md-mini md-warn"><img class="soundcloudwhite" src="images/soundcloudwhite.png"></md-button></a>
+          </div>
+        </md-card-title-text>
+      </md-card-title>
+            
+      <md-card-content>
+        <div flex layout="column" class="browseinfo">   
+            <!--<span class="browselabel" ng-hide="!profile.age">Age</span>-->
+            <span class="browsetext">{{profile.age}}</span>
+            <!--<span class="browselabel" ng-hide="!profile.city">City</span>-->
+            <span class="browsetext">{{profile.city}}, {{profile.state}}</span>
+            <!--<span class="browselabel" ng-hide="!profile.instrument1">Instruments</span>-->
+            <span class="browsetext">{{profile.instrument1}}<span ng-hide="!profile.instrument2">,</span> {{profile.instrument2}}</span>
+            <!--<span class="browselabel" id="biolabel" ng-hide="!profile.bio">Bio</span>-->
+            <span class="browsetext">{{profile.bio}}</span>
+        </div> 
+      </md-card-content>
+        
+      <md-card-actions>
+        <div layout="row" layout-align="center center" class="cardbuttons">
+          <!--<img class="spotifysmall" src="images/spotifyblack.png">-->
+          <md-button ui-sref="surveyDetails({ profileId: profile._id })" class="md-fab"><md-icon md-svg-icon="social:ic_poll_24px"></md-button>
+          <div layout="row" class="matchresponsebuttons">
+            <md-button ng-show="profilesList3.isLoggedIn" class="md-fab" ng-click="matchResponse.yes()"><img class="hornsiconbig" src="images/horns.png"></md-icon></md-button>
+            <md-button ng-show="profilesList3.isLoggedIn" class="md-fab"><img class="msgiconbig" src="images/msgbubb.png"></md-button>
+          </div>
+          <!--<img class="soundcloudsmall" src="images/soundcloudblack.png">-->
+        </div>
+      </md-card-actions>
+        
+        <!--<dir-pagination-controls on-page-change="profilesList.pageChanged(newPageNumber)"></dir-pagination-controls>-->
+        <!--<profiles-map profiles="profilesList.profiles"></profiles-map>-->
+      </md-card>
+      
+      <div layout="row" layout-align="center center" class="bottombuttons">
+        <div layout="row" layout-align>
+          <md-button ui-sref="profiles" class="md-fab"><md-icon md-svg-icon="navigation:ic_arrow_back_24px"></md-button>
+        </div>
+      </div>
+  </div>
+</div>

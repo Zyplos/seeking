@@ -1,0 +1,239 @@
+<div flex layout="row" layout-margin> <span class="surveydetailhead md-headline">{{surveyDetails.profile.firstName}}'s Survey Answers</span> </div>
+<md-content>
+  <md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="General">
+      <md-content class="md-padding">
+        <div flex layout="row" class="surveyq">
+          <div layout="column" flex> <span class="browselabel">What are your favorite records?</span> <span class="md-subhead">{{surveyDetails.profile.favRecordsAnswer}}</span> </div>
+        </div>
+        <div flex layout="row" class="surveyq">
+          <div layout="column" flex> <span class="browselabel">Who are your favorite producers?</span> <span class="md-subhead">{{surveyDetails.profile.favProducersAnswer}}</span> </div>
+        </div>
+        <div flex layout="row" class="surveyq">
+          <div layout="column" flex> <span class="browselabel">What are your favorite record labels?</span> <span class="md-subhead">{{surveyDetails.profile.favLabelsAnswer}}</span> </div>
+        </div>
+        <div flex layout="row" class="surveyq">
+          <div layout="column" flex> <span class="browselabel">What are your favorite books?</span> <span class="md-subhead">{{surveyDetails.profile.favBooksAnswer}}</span> </div>
+        </div>
+        <div flex layout="row" class="surveyq">
+          <div layout="column" flex> <span class="browselabel">What are your favorite movies?</span> <span class="md-subhead">{{surveyDetails.profile.favMoviesAnswer}}</span> </div>
+        </div>
+        <div flex layout="row" class="surveyq">
+          <div layout="column" flex> <span class="browselabel">What are your favorite TV shows?</span> <span class="md-subhead">{{surveyDetails.profile.favTvShowsAnswer}}</span> </div>
+        </div>
+      </md-content>
+    </md-tab>
+    <md-tab label="Experience">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">How many years have you been playing your instrument?</span> <span class="md-subhead">{{surveyDetails.profile.instrumentYearsAnswer}}</span> </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">What is your skill level? (1=Beginner | 5=Expert)</span> <span class="md-subhead">{{surveyDetails.profile.skillLevelAnswer1}}</span> <span class="browselabel">How would you want a future bandmate to answer this?</span>              <span class="md-subhead">{{surveyDetails.profile.skillLevelAnswer2}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span> <span class="md-subhead">{{surveyDetails.profile.skillLevelWeight}}</span>              </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">How much live band experience do you have? (1=None | 5=A Lot)</span> <span class="md-subhead">{{surveyDetails.profile.liveBandAnswer1}}</span> <span class="browselabel">How would you want a future bandmate to answer this?</span>              <span class="md-subhead">{{surveyDetails.profile.liveBandAnswer2}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span> <span class="md-subhead">{{surveyDetails.profile.liveBandWeight}}</span>              </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">How much gear do you have? (1=None | 5=Ready to Gig)</span> <span class="md-subhead">{{surveyDetails.profile.gearAnswer1}}</span> <span class="browselabel">How would you want a future bandmate to answer this?</span>              <span class="md-subhead">{{surveyDetails.profile.gearAnswer2}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span> <span class="md-subhead">{{surveyDetails.profile.gearWeight}}</span>              </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Finance">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">How much of a priority do you want a band to be in your life? (1=Casual | 5=Sole Focus)</span> <span class="md-subhead">{{surveyDetails.profile.priorityAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.priorityWeight}}</span> </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">What production style do you prefer? (1=Lo-fi | 5=Big Budget Studio)</span> <span class="md-subhead">{{surveyDetails.profile.productionAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.productionWeight}}</span> </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">How much money are you willing to spend on your ideal band? (1=None | 5=As Much As It Takes)</span> <span class="md-subhead">{{surveyDetails.profile.moneyAnswer1}}</span> <span class="browselabel">How would you want a future bandmate to answer this?</span>              <span class="md-subhead">{{surveyDetails.profile.moneyAnswer2}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span> <span class="md-subhead">{{surveyDetails.profile.moneyWeight}}</span>              </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Playing">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">How often do you want to practice? (1=Less than once a week | 5=3+ times a week)</span> <span class="md-subhead">{{surveyDetails.profile.practiceTimeAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.practiceTimeWeight}}</span> </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">How often do you want to play local shows? (1=Seldom | 5=Very often)</span> <span class="md-subhead">{{surveyDetails.profile.localShowsAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.localShowsWeight}}</span> </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">How much touring are you able to do? (1=None | 5=A Lot)</span> <span class="md-subhead">{{surveyDetails.profile.touringAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.touringWeight}}</span> </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Performance">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">How often do you want to record? (1=Never | 5=A Lot)</span> <span class="md-subhead">{{surveyDetails.profile.recordingAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.recordingWeight}}</span> </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">How involved do you wish to be with songwriting? (1=Never | 5=A Lot)</span> <span class="md-subhead">{{surveyDetails.profile.songwritingAnswer1}}</span> <span class="browselabel">How would you want a future bandmate to answer this?</span>              <span class="md-subhead">{{surveyDetails.profile.songwritingAnswer2}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span> <span class="md-subhead">{{surveyDetails.profile.songwritingWeight}}</span>              </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">Original band or cover/tribute band? (1=Original | 5=Cover/tribute)</span> <span class="md-subhead">{{surveyDetails.profile.originalOrCoverAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.originalOrCoverWeight}}</span> </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">What are yopur feelings on the occasional cover song? (1=Hate Them | 5=Love Them)</span> <span class="md-subhead">{{surveyDetails.profile.occasionalCoverAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.occasionalCoverWeight}}</span> </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Venues">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">Do you have practice space access? (1=No | 2=Yes)</span> <span class="md-subhead">{{surveyDetails.profile.practiceSpaceAnswer1}}</span> <span class="browselabel">How would you want a future bandmate to answer this?</span>              <span class="md-subhead">{{surveyDetails.profile.practiceSpaceAnswer2}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span> <span class="md-subhead">{{surveyDetails.profile.practiceSpaceWeight}}</span>              </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">What types of venues do you enjoy? (1=Houses | 5=Arenas)</span> <span class="md-subhead">{{surveyDetails.profile.venuesAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.venuesWeight}}</span> </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">What types of venues do you <strong>NOT</strong> enjoy? (1=Houses | 5=Arenas)</span> <span class="md-subhead">{{surveyDetails.profile.venuesBadAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.venuesBadWeight}}</span> </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Transportation">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">Do you have a vehicle? (1=No | 2=Yes)</span> <span class="md-subhead">{{surveyDetails.profile.vehicleAnswer1}}</span> <span class="browselabel">How would you want a future bandmate to answer this?</span> <span class="md-subhead">{{surveyDetails.profile.vehicleAnswer2}}</span>              <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span> <span class="md-subhead">{{surveyDetails.profile.vehicleWeight}}</span> </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">Do you have a tour-ready van? (1=No | 2=Yes)</span> <span class="md-subhead">{{surveyDetails.profile.vanAnswer1}}</span> <span class="browselabel">How would you want a future bandmate to answer this?</span>
+              <span
+                class="md-subhead">{{surveyDetails.profile.vanAnswer2}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span> <span class="md-subhead">{{surveyDetails.profile.vanWeight}}</span> </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Singing">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">Can you sing? (1=No | 2=Yes)</span> <span class="md-subhead">{{surveyDetails.profile.singAnswer1}}</span> <span class="browselabel">How would you want a future bandmate to answer this?</span> <span class="md-subhead">{{surveyDetails.profile.singAnswer2}}</span>              <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span> <span class="md-subhead">{{surveyDetails.profile.singWeight}}</span> </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">Can you harmonize? (1=No | 2=Yes)</span> <span class="md-subhead">{{surveyDetails.profile.harmonizeAnswer1}}</span> <span class="browselabel">How would you want a future bandmate to answer this?</span> <span class="md-subhead">{{surveyDetails.profile.harmonizeAnswer2}}</span>              <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span> <span class="md-subhead">{{surveyDetails.profile.harmonizeWeight}}</span> </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Social">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">How important do you think merchandise is to a band? (1=Not At All | 5=Very)</span> <span class="md-subhead">{{surveyDetails.profile.merchAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.merchWeight}}</span> </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">Do you view a band primarily as a family or a business? (1=Family | 5=Business)</span> <span class="md-subhead">{{surveyDetails.profile.familyOrBusinessAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.familyOrBusinessWeight}}</span> </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">How important is a band's image to you? (1=Doesn't Matter | 5=Very Important)</span> <span class="md-subhead">{{surveyDetails.profile.bandImageAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.bandImageWeight}}</span> </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Politics &amp; Religion">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">What are your politics? (1=Left | 5=Right)</span> <span class="md-subhead">{{surveyDetails.profile.politicsAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.politicsWeight}}</span> </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">How much do you want to involve politics in your band? (1=Not At All | 5=Very Much)</span> <span class="md-subhead">{{surveyDetails.profile.politicsBandAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.politicsBandWeight}}</span> </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">What religion/moral philosophy do you believe in?</span> <span class="md-subhead">{{surveyDetails.profile.religionAnswer}}</span> </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="browselabel">How much do you want to involve religion in your band? (1=Not At All | 5=Very Much)</span> <span class="md-subhead">{{surveyDetails.profile.religionBandAnswer}}</span> <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>              <span class="md-subhead">{{surveyDetails.profile.religionBandWeight}}</span> </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Misc">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <span class="browselabel">Do you drink?</span>
+
+              <span class="md-subhead" ng-show="surveyDetails.profile.drinkAnswer == 1">No</span>
+              <span class="md-subhead" ng-show="surveyDetails.profile.drinkAnswer == 2">Yes</span>
+              <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>
+              <span
+                class="md-subhead">{{surveyDetails.profile.drinkWeight}}</span>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <span class="browselabel">Do you enjoy harder drugs?</span>
+              <span class="md-subhead" ng-show="surveyDetails.profile.drugsAnswer == 1">No</span>
+              <span class="md-subhead" ng-show="surveyDetails.profile.drugsAnswer == 2">Yes</span>
+              <span class="browselabel">How important is agreement on this issue to you? (1=Not At All | 5=Very)</span>
+              <span class="md-subhead">{{surveyDetails.profile.drugsWeight}}</span> </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+  </md-tabs>
+</md-content>
+<div layout="row" layout-align="center center" class="bottombuttons">
+  <div layout="row" layout-align>
+    <md-button ui-sref="profiles2" class="md-fab">
+      <md-icon md-svg-icon="navigation:ic_arrow_back_24px"></md-icon>
+    </md-button>
+  </div>
+</div>

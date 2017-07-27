@@ -1,0 +1,62 @@
+<div layout="column">
+  <md-menu md-position-mode="target-right target" >
+    <md-button aria-label="Main menu" class="md-icon-button" ng-click="$mdOpenMenu($event)"><md-icon md-svg-icon="navigation:ic_menu_24px"></md-icon></md-button>
+    <md-menu-content width="4">
+      <md-menu-item ng-hide="auth.isLoggedIn">
+        <md-button ui-sref="login">
+          <div layout="row" flex>
+            <p flex>Login</p>
+          </div>
+        </md-button>
+      </md-menu-item>
+      <md-menu-item ng-hide="auth.isLoggedIn">
+        <md-button ui-sref="promo">
+          <div layout="row" flex>
+            <p flex>Sign up</p>
+          </div>
+        </md-button>
+      </md-menu-item>
+      <md-menu-item ng-show="auth.isLoggedIn">
+        <md-button ui-sref="profiles">
+          <div layout="row" flex>
+            <p flex>Profiles</p>
+          </div>
+        </md-button>
+      </md-menu-item>
+      <md-menu-item>
+        <md-button ui-sref="about">
+          <div layout="row" flex>
+            <p flex>About</p>
+          </div>
+        </md-button>
+      </md-menu-item>
+      <md-menu-item>
+        <md-button ui-sref="terms">
+          <div layout="row" flex>
+            <p flex>Terms</p>
+          </div>
+        </md-button>
+      </md-menu-item>
+      <md-menu-item>
+        <md-button ui-sref="privacy">
+          <div layout="row" flex>
+            <p flex>Privacy</p>
+          </div>
+        </md-button>
+      </md-menu-item>
+      <md-menu-item ng-show="auth.isLoggedIn">
+        <md-button ng-click="auth.logout()" ui-sref="profiles">
+          <div layout="row" flex>
+            <p flex>Logout</p>
+          </div>
+        </md-button>
+      </md-menu-item>
+    </md-menu-content>
+  </md-menu>
+</div>
+
+<!--<div layout="row">-->
+<!--  <md-button flex ui-sref="login" ng-hide="auth.isLoggedIn">Login</md-button>-->
+<!--  <md-button flex ui-sref="promo" ng-hide="auth.isLoggedIn">Sign up</md-button>-->
+<!--  <md-button flex ng-click="auth.logout()" ng-show="auth.isLoggedIn" ui-sref="profiles">Logout</md-button>-->
+<!--</div>-->

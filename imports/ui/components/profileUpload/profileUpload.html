@@ -1,0 +1,37 @@
+<div layout="column">
+  <div ngf-drop
+    ngf-select
+    ngf-change="profileUpload.addImages($files)"
+    ngf-drag-over-class="{accept:'dragover', reject:'dragover-err', delay:100}"
+    class="drop-box"
+    ngf-multiple="false"
+    ngf-allow-dir="false"
+    ngf-accept="'image/*'"
+    ngf-drop-available="true"
+    ng-hide="profileUpload.cropImgSrc">
+    <div>Click here to select an image</div>
+    <div>
+      <strong>OR</strong>
+    </div>
+    <div>You can also drop the image here</div>
+  </div>
+  <div ng-show="profileUpload.cropImgSrc" layout="column" class="ng-crop">
+    <div>
+      <h3>Edit &amp; crop</h3>
+      <md-button ng-click="profileUpload.save()" class="md-primary">
+        Save Image
+      </md-button>
+      <md-button ng-click="profileUpload.reset()">
+        Cancel
+      </md-button>
+    </div>
+    <div class="ng-crop-container">
+      <img-crop image="profileUpload.cropImgSrc" result-image="profileUpload.myCroppedImage" area-type="square"></img-crop>
+    </div>
+  </div>
+  <div layout="row" class="images-container-title" sv-root sv-part="profileUpload.thumbs">
+    <div sv-element class="profile-image-container" ng-class="{'main-image': $index === 0}" ng-repeat="thumb in profileUpload.thumbs">
+      <img draggable="false" ng-src="{{ thumb.url }}"/>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<md-dialog aria-label="Enter your info" ng-cloak>
+  <md-toolbar class="md-accent">
+    <div class="md-toolbar-tools">
+      <h2>Enter your info</h2>
+      <span flex></span>
+      <md-button ng-click="profileAddModal.close()">
+        Close
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content>
+    <div class="md-dialog-content">
+      <profile-add done="profileAddModal.close()"></profile-add>
+    </div>
+  </md-dialog-content>
+</md-dialog>

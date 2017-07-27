@@ -1,0 +1,860 @@
+<md-content>
+  <md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="General">
+      <md-content class="md-padding">
+        <div flex layout="row" class="surveyq">
+          <div layout="column" flex> <span class="md-subhead">What are your favorite records?</span>
+            <md-input-container class="detailsinput"> <input ng-model="survey1.profile.favRecordsAnswer"> </md-input-container>
+          </div>
+        </div>
+        <div flex layout="row" class="surveyq">
+          <div layout="column" flex> <span class="md-subhead">Who are your favorite producers?</span>
+            <md-input-container class="detailsinput"> <input ng-model="survey1.profile.favProducersAnswer"> </md-input-container>
+          </div>
+        </div>
+        <div flex layout="row" class="surveyq">
+          <div layout="column" flex> <span class="md-subhead">What are your favorite record labels?</span>
+            <md-input-container class="detailsinput"> <input ng-model="survey1.profile.favLabelsAnswer"> </md-input-container>
+          </div>
+        </div>
+        <div flex layout="row" class="surveyq">
+          <div layout="column" flex> <span class="md-subhead">What are your favorite books?</span>
+            <md-input-container class="detailsinput"> <input ng-model="survey1.profile.favBooksAnswer"> </md-input-container>
+          </div>
+        </div>
+        <div flex layout="row" class="surveyq">
+          <div layout="column" flex> <span class="md-subhead">What are your favorite movies?</span>
+            <md-input-container class="detailsinput"> <input ng-model="survey1.profile.favMoviesAnswer"> </md-input-container>
+          </div>
+        </div>
+        <div flex layout="row" class="surveyq">
+          <div layout="column" flex> <span class="md-subhead">What are your favorite TV shows?</span>
+            <md-input-container class="detailsinput"> <input ng-model="survey1.profile.favTvShowsAnswer"> </md-input-container>
+          </div>
+        </div>
+      </md-content>
+    </md-tab>
+    <md-tab label="Experience">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="md-subhead">How many years have you been playing your instrument?</span>
+              <md-input-container class="detailsinput"> <input ng-model="survey1.profile.instrumentYearsAnswer" type="number"> </md-input-container>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">What is your skill level?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.skillLevelAnswer1" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Beginner</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Expert</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How would you want a future bandmate to answer this?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.skillLevelAnswer2" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Beginner</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Expert</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.skillLevelWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How much live band experience do you have?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.liveBandAnswer1" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">None</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">A lot</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How would you want a future bandmate to answer this?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.liveBandAnswer2" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">None</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">A lot</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.liveBandWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How much gear do you have?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.gearAnswer1" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">None</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Ready to gig</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How would you want a future bandmate to answer this?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.gearAnswer2" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">None</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Ready to gig</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.gearWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Finance">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How much of a priority do you want a band to be in your life?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.priorityAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Casual</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Sole focus</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.priorityWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">What production style do you prefer?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.productionAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Lo-fi</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Big budget studio</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.productionWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How much money are you willing to spend on your ideal band?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.moneyAnswer1" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">None</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">As much as it takes</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How would you want a future bandmate to answer this?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.moneyAnswer2" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">None</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">As much as it takes</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.moneyWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Playing">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How often do you want to practice?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.practiceTimeAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Less than once a week</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">3+ times a week</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.practiceTimeWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How often do you want to play local shows?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.localShowsAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Seldom</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very often</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.localShowsWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How much touring are you able to do?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.touringAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">None</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">A lot</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.touringWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Performance">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How often do you want to record?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.recordingAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Never</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">A lot</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.recordingWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How involved do you wish to be with songwriting?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.songwritingAnswer1" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Never</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">A lot</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How would you want a future bandmate to answer this?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.songwritingAnswer2" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Never</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">A lot</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.songwritingWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">Original band or cover/tribute band?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.originalOrCoverAnswer" step="1" min="1" max="2" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Original</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Cover/tribute</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.originalOrCoverWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">What are your feelings on the occasional cover song?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.occasionalCoverAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Hate them</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Love them</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.occasionalCoverWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Venues">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">Do you have practice space access?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.practiceSpaceAnswer1" step="1" min="1" max="2" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">No</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Yes</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How would you want a future bandmate to answer this?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.practiceSpaceAnswer2" step="1" min="1" max="2" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">No</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Yes</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.practiceSpaceAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">What types of venues do you enjoy?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.venuesAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Houses</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Arenas</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.venuesWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">What types of venues do you <strong>NOT</strong> enjoy?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.venuesBadAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Houses</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Arenas</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.venuesBadWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Transportation">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">Do you have a vehicle?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.vehicleAnswer1" step="1" min="1" max="2" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">No</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Yes</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How would you want a future bandmate to answer this?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.vehicleAnswer2" step="1" min="1" max="2" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">No</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Yes</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.vehicleWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">Do you have a tour-ready van?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.vanAnswer1" step="1" min="1" max="2" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">No</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Yes</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How would you want a future bandmate to answer this?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.vanAnswer2" step="1" min="1" max="2" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">No</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Yes</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.vanWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Singing">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">Can you sing?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.singAnswer1" step="1" min="1" max="2" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">No</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Yes</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How would you want a future bandmate to answer this?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.singAnswer2" step="1" min="1" max="2" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">No</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Yes</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.singWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">Can you harmonize?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.harmonizeAnswer1" step="1" min="1" max="2" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">No</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Yes</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How would you want a future bandmate to answer this?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.harmonizeAnswer2" step="1" min="1" max="2" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">No</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Yes</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.harmonizeWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Social">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How important do you think merchandise is to a band?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.merchAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.merchWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">Do you view a band primarily as a family or a business?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.familyOrBusinessAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Family</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Business</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.familyOrBusinessWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How important is a band's image to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.bandImageAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Doesn't matter</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very important</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.bandImageWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Politics &amp; Religion">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">What are your politics?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.politicsAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Left</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Right</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.politicsWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How much do you want to involve politics in your band?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.politicsBandAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very much</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.politicsBandWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex> <span class="md-subhead">What religion/moral philosophy do you believe in?</span>
+              <md-input-container class="detailsinput"> <input ng-model="survey1.profile.religionAnswer"> </md-input-container>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">How much do you want to involve religion in your band?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.religionBandAnswer" step="1" min="1" max="5" aria-label="importance" class="weightslider"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very much</span> </div>
+                </div>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.religionBandWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+    <md-tab label="Misc">
+      <md-content class="md-padding">
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">Do you drink?</span>
+                <md-input-container>
+                  <md-select name="type" ng-model="survey1.profile.drinkAnswer">
+                    <md-option value="1">No</md-option>
+                    <md-option value="2">Yes</md-option>
+                  </md-select>
+                </md-input-container>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.drinkWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <md-card>
+          <div flex layout="row" class="surveyq">
+            <div layout="column" flex>
+              <div flex layout="column" class="sliderquestioncontainer"> <span class="md-subhead">Do you enjoy harder drugs?</span>
+                <md-input-container>
+                  <md-select name="type" ng-model="survey1.profile.drugsAnswer">
+                    <md-option value="1">No</md-option>
+                    <md-option value="2">Yes</md-option>
+                  </md-select>
+                </md-input-container>
+              </div>
+              <div flex layout="column" class="weightcontainer2"> <span class="md-subhead">How important is agreement on this issue to you?</span>
+                <div flex layout="row" layout-align="center center" class="slidercontainer2">
+                  <md-slider flex="95" md-discrete ng-model="survey1.profile.drugsWeight" step="1" min="1" max="5" aria-label="importance" class="weightslider md-hue-1"></md-slider>
+                </div>
+                <div flex layout>
+                  <div flex layout> <span class="sliderlabel small md-body-1">Not at all</span> </div>
+                  <div flex layout layout-align="end"> <span class="sliderlabel small md-body-1">Very</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+      </md-content>
+    </md-tab>
+  </md-tabs>
+</md-content>
+<div layout="row" layout-align="center center" style="background: #fafafa;">
+  <md-button class="md-fab" ng-click="survey1.save()">
+    <md-icon md-svg-icon="content:ic_save_24px"></md-icon>
+  </md-button>
+  <md-button class="md-fab md-warn" ng-click="survey1.save()" ui-sref="profiles">
+    <md-icon md-svg-icon="action:ic_done_24px"></md-icon>
+  </md-button>
+</div>

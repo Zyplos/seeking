@@ -1,0 +1,34 @@
+<div flex class="detailsform" layout="column" layout-padding>
+  <div flex layout="column" layout-gt-sm="row"  layout-padding>
+    <div flex layout="column" class="detailscontent">
+        <span class="md-headline">{{profileDetails2.profile.firstName}}'s Profile</span>
+        <md-divider class="detailsdivider"></md-divider>
+        <span class="detailsheader md-subhead" ng-hide="!profileDetails2.profile.lookingFor">Seeking</span>
+        <span class="md-subhead">{{profileDetails2.profile.lookingFor}}</span>
+        <span class="detailsheader md-subhead" ng-hide="!profileDetails2.profile.age">Age</span>
+        <span class="md-subhead">{{profileDetails2.profile.age}}</span>
+        <span class="detailsheader md-subhead" ng-hide="!profileDetails2.profile.city">City</span>
+        <span class="md-subhead">{{profileDetails2.profile.city}}</span>
+        <span class="detailsheader md-subhead" ng-hide="!profileDetails2.profile.state">State</span>
+        <span class="md-subhead">{{profileDetails2.profile.state}}</span>
+        <span class="detailsheader md-subhead" ng-hide="!profileDetails2.profile.instrument1">Instrument 1</span>
+        <span class="md-subhead">{{profileDetails2.profile.instrument1}}</span>
+        <span class="detailsheader md-subhead" ng-hide="!profileDetails2.profile.instrument2">Instrument 2</span>
+        <span class="md-subhead">{{profileDetails2.profile.instrument2}}</span>
+        <span class="detailsheader md-subhead" ng-hide="!profileDetails2.profile.favGenres">Favorite Genres</span>
+        <span class="md-subhead">{{profileDetails2.profile.favGenres}}</span>
+        <span class="detailsheader md-subhead" ng-hide="!profileDetails2.profile.favBands">Favorite Bands/Artists</span>
+        <span class="md-subhead">{{profileDetails2.profile.favBands}}</span>
+        <span class="detailsheader md-subhead" ng-hide="!profileDetails2.profile.bio">Bio</span>
+        <span class="md-subhead">{{profileDetails2.profile.bio}}</span>
+
+      <md-divider class="detailsdivider"></md-divider>
+      <div layout="row" layout-align="center center" class="bottombuttons">
+        <div layout="row" layout-align>
+          <md-button ui-sref="profiles2" class="md-fab"><md-icon md-svg-icon="navigation:ic_arrow_back_24px"></md-button>
+          <!--<md-button ui-sref="surveyDetails({ profileId: profile._id })" class="md-fab md-mini"><md-icon md-svg-icon="social:ic_poll_24px"></md-button>-->
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

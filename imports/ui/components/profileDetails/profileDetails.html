@@ -1,0 +1,86 @@
+<div flex class="detailsform" layout="column" layout-padding>
+  <div layout="column" layout-gt-sm="row"  layout-padding>
+    <form flex layout="column">
+      <md-input-container class="detailsinput">
+        <label>First Name/Band Name</label>
+        <input ng-model="profileDetails.profile.firstName">
+      </md-input-container>
+
+      <!--<md-input-container class="detailsinput" ng-hide="!profileDetails.isOwner">-->
+      <!--  <label>Last Name</label>-->
+      <!--  <input ng-model="profileDetails.profile.lastName" ng-disabled="!profileDetails.isOwner">-->
+      <!--</md-input-container>-->
+
+      <md-input-container class="detailsinput">
+        <label>What are you looking for?</label>
+        <input ng-model="profileDetails.profile.lookingFor">
+      </md-input-container>
+
+      <md-input-container class="detailsinput">
+        <label>Facebook URL (Important! Include full URL)</label>
+        <input ng-model="profileDetails.profile.fbUrl">
+      </md-input-container>
+
+      <md-input-container class="detailsinput">
+        <label>Instrument 1</label>
+        <input ng-model="profileDetails.profile.instrument1">
+      </md-input-container>
+
+      <md-input-container class="detailsinput">
+        <label>Instrument 2</label>
+        <input ng-model="profileDetails.profile.instrument2">
+      </md-input-container>
+
+      <md-input-container class="detailsinput">
+        <label>City</label>
+        <input ng-model="profileDetails.profile.city">
+      </md-input-container>
+
+      <md-input-container class="detailsinput">
+        <label>State</label>
+        <input ng-model="profileDetails.profile.state">
+      </md-input-container>
+
+      <md-input-container class="detailsinput">
+        <label>Age</label>
+        <input ng-model="profileDetails.profile.age">
+      </md-input-container>
+
+      <md-input-container class="md-block detailsinput">
+        <label>Biography</label>
+        <textarea ng-model="profileDetails.profile.bio" rows="5"></textarea>
+      </md-input-container>
+
+
+      <md-input-container class="detailsinput">
+        <label>Favorite Genres</label>
+        <input ng-model="profileDetails.profile.favGenres">
+      </md-input-container>
+
+      <md-input-container class="detailsinput">
+        <label>Favorite Bands/Artists</label>
+        <input ng-model="profileDetails.profile.favBands">
+      </md-input-container>
+
+      <md-input-container class="detailsinput">
+        <label>Bandcamp URL (Include full URL)</label>
+        <input ng-model="profileDetails.profile.bcUrl">
+      </md-input-container>
+
+      <md-input-container class="detailsinput">
+        <label>SoundCloud URL (Include full URL)</label>
+        <input ng-model="profileDetails.profile.scUrl">
+      </md-input-container>
+
+      <!--<profile-unmatched profile="profileDetails.profile"></profile-unmatched>-->
+
+      <!--<profile-map location="profileDetails.profile.location"></profile-map>-->
+      <div layout="row" layout-align="center center">
+        <div layout="row">
+          <md-button ng-click="profileDetails.save()" ui-sref="profiles" class="md-fab"><md-icon md-svg-icon="content:ic_save_24px"></md-icon></md-button>
+          <!--<md-button ui-sref="survey1({ profileId: profile._id })" class="md-fab md-mini md-warn"><md-icon md-svg-icon="social:ic_poll_24px"></md-button>-->
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
